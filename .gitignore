@@ -1,0 +1,6 @@
+/.settings/
+/src/main/
+/src/test/resources/
+/target/
+.classpath
+.project
