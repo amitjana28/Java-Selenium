@@ -1,0 +1,9 @@
+Trouleshooting during learning and Notes
+
+1) While we use normal Java project and add Selenium and chromeDriver jar manually we need to set system property as below mentioned in our test file
+	System.setProperty("webdriver.chrome.driver", "C:\\path\\of\\chromedriver\\chromedriver.exe");
+	
+	But when we use mave project we need to install WebDriverManager Dependency in pom.xml file and use below code in our test file
+	WebDriverManager.chromedriver().setup();
+	
+2) While using maven project we need to set goal as "clean install" while building maver project

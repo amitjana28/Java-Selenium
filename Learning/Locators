@@ -1,0 +1,17 @@
+Locators in Selenium :
+
+Locaotr is a commands that tells Selenium which GUI element is need to operate. There are multiple ways to locate a elements in Selenium. 
+	1) By class name : Locates elements whose class name contains the search value.
+	2) By name : Locates elements whose name attribute contains the search value.
+	3) By id : Locates elements whose ID attribute contains the search value.
+	4) By link text : Locates anchor <a> elements whose visibe text matching the search value.
+	5) By partial link text : Locates anchor <a> elements whose visibe text contains the search value.
+	6) By tag name : Locates elements whose tag name matching the search value.
+	7) By CSS : Locate element matching a CSS selector
+	8) By xpath : Locate elements matching  an Xpath Expresions
+	
+	
+CSS Selectors : 
+	ID attribute value : # is used for ID. Example : #username
+	class attribute value : . is used for class. Example : .intro
+	CSS Syntex : element[attribute="value"]

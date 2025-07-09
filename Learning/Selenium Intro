@@ -1,0 +1,26 @@
+Selenium is open src tool for automating testing of web application across different platform and browser in different language. 
+Selenium suite contain multiple tools like : 
+	Selenium IDE	Selenium RC(Depereciated)	Selenium Webdriver		Selenium Grid
+	
+	
+Selenium IDE : It is a Chrome and firefox plugin that we can install in our browser and perform test. Easy to use and used as prototyping tool not for advance script and testing.
+Selenium RC : It is the first automated web testing tool that allow user to use any programming language to write testcase in order to automate UI tests for web apps against any HTTP website. It contain two parts :
+	 1) Client library for the prefered language
+	 2) Server that launch and kill Browser automatically(One need to install and launch a seperate application called Selenium Remote control Server before runing test scripts which act as a mediator between the browser and Selenium commands)
+	 
+	 --> How Selenium RC works behind the scenes : RC server injects a JS program known as Selenium core in browser. Once Selenium Core intected, it started recieving instructions from RC server based on test script. Selenium core executed all the instrution in JS commands. The web browser executes all the commands giver by selenium Core and returns the test summary back to the server.
+	 
+Selenium Webdriver : Selenium Web driver is better then IDE and RC as it control browser dirctly from OS level and doesn't required any proxy server. It required IDE for test script and web browser for run script.
+
+Selenium Grid : It is used together with Selenium RC to run parallel tests accross different machines and different browser all at the same time using hub node concepts.
+
+
+
+Selenium Project setup using Jar files: 
+	Download Java JDK(Make sure to add JAVA_HOME variable & path in your Environment variable in your system), Eclipse IDE and Selenium Jar file.
+	Create new Java Project in IDE and add Selenium Jar file in your projects build path-->Libraries
+	
+Selenium Project setup using build tool like maven:
+	Create a maven project and add required dependencies in your pom.xml file.
+	
+	 
