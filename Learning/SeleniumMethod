@@ -1,0 +1,20 @@
+Selenium Methods :
+
+1) While we use normal Java project and add Selenium and chromeDriver jar manually we need to set system property as below mentioned in our test file
+	System.setProperty("webdriver.chrome.driver", "C:\\path\\of\\chromedriver\\chromedriver.exe");
+	
+	But when we use mave project we need to install WebDriverManager Dependency in pom.xml file and use below code in our test file
+	WebDriverManager.chromedriver().setup();
+	
+2) To launch any url in browser we have 2 methods :
+	driver.get("www.url.com");
+	driver.navigate().to("www.url.com");
+	
+3) To go back we use below method
+	driver.navigate().back();
+	
+4) To find elemnt we use below methods
+	Return single web element : driver.findElement(By.id("username")) ----------> throws a NoSuchElementException if no elements is found
+		Syntex : WebElement elementName = driver.findElement(By.selectorStrategy("LocatorValue"));
+	Return list of web Elements : driver.findElements(By.name("intro")) ------------> return empty list id no elements is found
+		Syntex : List<WebElement> elementName = driver.findElements(By.selectorStrategy("LocatorValue"));
