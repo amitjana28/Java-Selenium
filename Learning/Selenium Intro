@@ -28,4 +28,56 @@ Selenium provides us testrunners to better organize and execute testcases
 	For javascript we have : Jest and mocha
 	For python we have : pytesy and unittest
 	
-	 
+	
+Waits in Selenium : 1)Implicit Wait		2)Explicit Wait		3) Fluent Wait
+
+	1) Implicit Wait : Implicit waits are global wait that applies on all the element location for the entire session, therefor using this wait is not recommanded. It can be set either with the timeouts capability in browser option or with driver methods
+			Example with driver method----------> driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+			Example with timeouts capability in browser options ------------->
+					ChromeOptions chromeOptions = getDefaultChromeOptions();
+					Duration duration = Duration.of(5, ChronoUnit.SECONDS);
+					chromeOptions.setImplicitWaitTimeout(duration);
+					
+	2) Explicit Wait : Explicit waits are wait applied on specific element looking for specific condition to be met, if condition not met give timeout error. Recommanded to use Explicit wait.
+			Example ------------->
+					Wait<WebDriver> explicitWait = new WebDriverWait(driver, Duration.ofSeconds(2));
+					wait.until(d->submitButton.isDisplayed());
+					
+	3) Fluent Wait : Fluent wait is like coustomized wait. The Wait class can be instantiated with various parameters that will change how the conditions are evaluated.
+		This can include:
+			Changing how often the code is evaluated (polling interval)
+			Specifying which exceptions should be handled automatically
+			Changing the total timeout length
+			Customizing the timeout message
+		
+		Example------->
+			Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(2)).pollingEvery(Duration.ofMillis(300))
+			.ignoring(ElementNotInteractableException.class);
+
+		    wait.until(d -> {
+		          revealed.sendKeys("Displayed");
+		          return true;
+		        });
+	
+
+	
+	
+	
+Driver Sessions is used to start and stop a session for opening and closing a browser. The Session is created automatically by initializing a new Driver class object. Each Langauge allow a session to be created with argument from one of the below mentioned classes.
+	Options 
+	HTTP Client configurations
+	Listeners
+	
+Browser Options are shared by all the browsers. In selenum 3 we were using DesiredCapability classes but from selenium4 we have to use browser options classes. For remote driver sessions, a browser options instance is required as it determined which browser will be used.
+
+	Example ----------->
+			ChromeOptions chromeoption = getDefaultChromeOptions();
+			String name = chromeoption.getBrowserName();
+			chromeoption.setBrowserVersion("latest");
+			chromeoption.setPlatformName("OS X 10.6");
+			chromeoption.setAcceptInsecureCerts(true);
+			chromeoption.setScriptTimeout(Duration.of(5, ChronoUnit.SECONDS));
+			chromeoption.setPageLoadTimeout(Duration.of(5, ChronoUnit.SECONDS));
+			chromeoption.setImplicitWaitTimeout(Duration.of(5, ChronoUnit.SECONDS));
+			chromeoption.setPageLoadStrategy(PageLoadStrategy.NORMAL);		// NORMAL--> Used by default,wait for all resourse to load; EAGER--->DOM access is ready, but other resources may still loading;   NONE---> Doesn't block webdriver at all
+

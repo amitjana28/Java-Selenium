@@ -32,11 +32,34 @@ Selenium Methods :
 	
 7) To work with checkboxsame as radio button using isSelected() and click() methods
 
-8) To send values in textboxes we use TextBoxElement.sendKeys("value want to send");
-
+8) To send values in textboxes we use TextBoxElement.sendKeys("value want to send"); and to clear text field we use TextBoxElement.clear();
 
 9) To upload file, If the element is an input element with type file, you can use the send keys method to send the full path to the file that will be uploaded.
 		File uploadFile = new File("src/test/resources/selenium-snapshot.png");
 		WebElement fileInput = driver.findElement(By.cssSelector("input[type=file]"));
 	    fileInput.sendKeys(uploadFile.getAbsolutePath());
 	    driver.findElement(By.id("file-submit")).click();
+	    
+	    
+	    
+	    
+How we can retreived information ?
+	element.isDisplayed() : Return Boolean value
+	element.isEnabled() : Return Boolean value
+	element.isSelected() : Return Boolean value
+	element.getTagName() : Return String
+	element.getRect() : Return a Rectangle(x-axis, y-axis, Height, Width)
+	element.getCssValue("font-size") : Return a String
+	element.getText() : Return a String
+	element.getTitle() : Return title of the page
+	element.getCurrentUrl() : Return URL of the page
+	element.getAttribute("href") : Return String
+	
+	
+Browser Navigation : 
+	driver.get(url);
+	driver.navigate().to(url);
+	driver.navigate().back();
+	driver.navigate().forward();
+	driver.navigate().refresh();
+	
