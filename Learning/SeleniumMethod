@@ -18,3 +18,14 @@ Selenium Methods :
 		Syntex : WebElement elementName = driver.findElement(By.selectorStrategy("LocatorValue"));
 	Return list of web Elements : driver.findElements(By.name("intro")) ------------> return empty list id no elements is found
 		Syntex : List<WebElement> elementName = driver.findElements(By.selectorStrategy("LocatorValue"));
+		
+5) To work with radio button we can simply use few methods like radioElement.isSelected() to check wheater radio button is selected or not, also we can use radioElement.click() to select radio button
+
+6) To work with dropdown we can use Select class, where we need to create object of select class and use select class constructor where we pass our element in that constructor
+	Select cityDropDown = new Select(driver.findElement(By.cssSelector("#country")));
+	
+	Then to select values from dropdown we have few methods like :
+	1) cityDropDown.selectByValue("Value");
+	2) cityDropdown.selectBYIndex(5);
+	3) cityDropdown.selectByVisibleText("Faridabad");
+	4) cityDropdown.selectByContainsVisibleText("somevalue");
