@@ -23,4 +23,9 @@ Selenium Project setup using Jar files:
 Selenium Project setup using build tool like maven:
 	Create a maven project and add required dependencies in your pom.xml file.
 	
+Selenium provides us testrunners to better organize and execute testcases
+	For java we have : Junit and TestNG
+	For javascript we have : Jest and mocha
+	For python we have : pytesy and unittest
+	
 	 

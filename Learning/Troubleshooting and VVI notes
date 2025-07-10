@@ -7,3 +7,5 @@ Trouleshooting during learning and Notes
 	WebDriverManager.chromedriver().setup();
 	
 2) While using maven project we need to set goal as "clean install" while building maver project
+
+3) To run all the testcase we can also use terminal navigate to project directory and run command "mvn clean test"

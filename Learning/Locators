@@ -14,4 +14,18 @@ Locaotr is a commands that tells Selenium which GUI element is need to operate. 
 CSS Selectors : 
 	ID attribute value : # is used for ID. Example : #username
 	class attribute value : . is used for class. Example : .intro
-	CSS Syntex : element[attribute="value"]
+	CSS Syntex : element[attribute="value"]; 	element#id;		element.class;		element.class[attribute="value"];		element:contains("innerTExtValue")
+	
+Xpaths : We have two types of xpath 
+	1) Absolute	xpath : Begin from root of the html document and specify the complete path of the elemnet. Not flexible can break due to any little change in UI.
+			Example : /html/body/div/div[2]/span[3]/form/input[3]
+	2) Relative xpath : Begin from specific element and navigate through the DOM herarchy to locate the desired element.
+			Example : //form/input[3]
+			
+	Elements can be queried by using Axes and functions as well : 
+		There are 13 different axes for querying an elements : 
+			1) ancestor : ancestor is used when we want to check all the parent nodes from the context node up to root. 
+				Example--> //a[@title="Pricing"]/ancestor::div
+			2) ancestor-or-self : ancestor-or-self is used when we want to select all the parent nodes upto root including the context node.
+				Example--> //a[@title="Pricing"]/ancestor::div 
+			3) attribute : 
