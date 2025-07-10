@@ -1,0 +1,13 @@
+JUnit is a testrunner for java. In our Project we are using Junit5 which is JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
+
+Annotations in Junit5 are : 
+	@Test : Denotes that a method is a test method. 
+	@BeforeEach : Denotes that the annotated method should be executed before each @Test, @RepeatedTest, @ParameterizedTest, or @TestFactory method in the current class
+	@AfterEach : Denotes that the annotated method should be executed after each @Test, @RepeatedTest, @ParameterizedTest, or @TestFactory method in the current class
+	@BeforeAll : Denotes that the annotated method should be executed before all @Test, @RepeatedTest, @ParameterizedTest, and @TestFactory methods in the current class
+	@AfterAll : Denotes that the annotated method should be executed after all @Test, @RepeatedTest, @ParameterizedTest, and @TestFactory methods in the current class
+	
+
+	
+How can we skip a testcase to execute/run?
+	We can do so using @Disabled("Skipped reason") annotation

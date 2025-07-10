@@ -2,7 +2,8 @@ package seleniumbasics;
 
 import java.time.Duration;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestCase1 {
 
-	@Test
+	@Test @Disabled("Skipping this test for Demo Purpose")
 	public void RegisterUser() throws InterruptedException {
 		// Set system property
 		WebDriverManager.chromedriver().setup();
