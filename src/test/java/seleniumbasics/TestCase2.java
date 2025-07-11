@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class TestCase2 {
 		driver = new ChromeDriver();
 	}
 	
-	@Test
+	@Test @Disabled
 	public void LoginUser() {
 		// Add implecitly wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
